@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Trusted Ballarat electrician based in Bakery Hill. Switchboard upgrades, lighting, underground power & 24/7 emergency callouts. Same-day call-backs.">
+<title>Tudor Electrical | Ballarat's Trusted Electricians</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --yellow:#FFD60A;
+  --yellow-dark:#E6BE00;
+  --yellow-tint:#FFF9D6;
+  --yellow-soft:#FFFCEB;
+  --charcoal:#1A1A1F;
+  --charcoal-light:#2D2D35;
+  --grey:#6B6B73;
+  --light:#F5F5F7;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--charcoal);line-height:1.65;background:var(--white);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;font-weight:800;line-height:1.15;color:var(--charcoal)}
+h1{font-size:clamp(2.2rem,5.5vw,4rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:1rem}
+h3{font-size:1.25rem;margin-bottom:0.75rem}
+p{margin-bottom:1rem}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+.section{padding:90px 0}
+.eyebrow{display:inline-block;font-family:'Raleway',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--charcoal);background:var(--yellow);padding:6px 14px;border-radius:3px;margin-bottom:1.25rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-family:'Raleway',sans-serif;font-weight:700;font-size:0.95rem;letter-spacing:0.5px;text-transform:uppercase;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:all .25s ease;min-height:48px}
+.btn-primary{background:var(--yellow);color:var(--charcoal);border-color:var(--yellow)}
+.btn-primary:hover{background:var(--charcoal);color:var(--yellow);border-color:var(--charcoal);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.18)}
+.btn-outline{background:transparent;color:var(--white);border-color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--charcoal);transform:translateY(-2px)}
+.btn-dark{background:var(--charcoal);color:var(--yellow);border-color:var(--charcoal)}
+.btn-dark:hover{background:var(--yellow);color:var(--charcoal);border-color:var(--yellow)}
+
+/* Navbar */
+.navbar{position:sticky;top:0;background:var(--white);z-index:100;border-bottom:1px solid #eee;box-shadow:0 1px 0 rgba(0,0,0,0.02)}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1240px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;font-weight:900;font-size:1.35rem;color:var(--charcoal)}
+.logo-mark{width:38px;height:38px;background:var(--yellow);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--charcoal);font-size:1.1rem;transform:rotate(-6deg)}
+.nav-links{display:flex;gap:32px;align-items:center;list-style:none}
+.nav-links a{font-weight:600;font-size:0.95rem;color:var(--charcoal);transition:color .2s}
+.nav-links a:hover{color:var(--yellow-dark)}
+.nav-cta{background:var(--charcoal);color:var(--yellow)!important;padding:10px 18px;border-radius:4px;font-size:0.85rem!important;letter-spacing:0.5px;text-transform:uppercase}
+.nav-cta:hover{background:var(--yellow);color:var(--charcoal)!important}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--charcoal);padding:8px;min-width:48px;min-height:48px}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(135deg,#1A1A1F 0%,#2D2D35 60%,#3a3a42 100%);color:var(--white);padding:110px 0 130px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,214,10,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,214,10,0.08) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%)}
+.hero::after{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,214,10,0.18) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,214,10,0.15);border:1px solid rgba(255,214,10,0.4);padding:8px 16px;border-radius:30px;font-size:0.85rem;font-weight:600;color:var(--yellow);margin-bottom:24px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 12px var(--yellow);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.3)}}
+.hero h1{color:var(--white);margin-bottom:1.25rem}
+.hero h1 .highlight{color:var(--yellow);position:relative;display:inline-block}
+.hero h1 .highlight::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:4px;background:var(--yellow);opacity:0.4}
+.hero p.lead{font-size:1.1rem;color:rgba(255,255,255,0.85);margin-bottom:2rem;max-width:600px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{position:relative;height:420px;display:flex;align-items:center;justify-content:center}
+.hero-svg{width:100%;height:100%;max-width:420px}
+.bolt-card{position:absolute;background:var(--yellow);color:var(--charcoal);padding:20px 24px;border-radius:8px;font-family:'Raleway',sans-serif;font-weight:800;box-shadow:0 20px 40px rgba(0,0,0,0.4);transform:rotate(-4deg)}
+.bolt-card.bc1{top:18%;left:5%;font-size:1rem}
+.bolt-card.bc2{bottom:15%;right:8%;background:var(--white);transform:rotate(5deg);font-size:0.9rem}
+.bolt-card i{margin-right:8px}
+
+/* About */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.about-text p{color:var(--grey);font-size:1.02rem}
+.stats-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.stat-card{background:var(--yellow-soft);border-left:5px solid var(--yellow);padding:28px 30px;border-radius:8px;display:flex;align-items:center;gap:24px;transition:transform .25s}
+.stat-card:hover{transform:translateX(6px)}
+.stat-num{font-family:'Raleway',sans-serif;font-weight:900;font-size:2.6rem;color:var(--charcoal);line-height:1;min-width:140px}
+.stat-label{font-weight:600;color:var(--charcoal-light);text-transform:uppercase;letter-spacing:1px;font-size:0.85rem}
+
+/* Services */
+.services{background:var(--light);position:relative}
+.section-head{text-align:center;max-width:680px;margin:0 auto 60px}
+.section-head p{color:var(--grey)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);padding:36px 30px;border-radius:10px;border:1px solid #eee;transition:all .3s ease;position:relative;overflow:hidden}
+.service-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.08);border-color:var(--yellow-tint)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:62px;height:62px;background:var(--yellow);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--charcoal);margin-bottom:22px;transform:rotate(-4deg)}
+.service-card p{color:var(--grey);font-size:0.95rem;margin:0}
+
+/* Why Choose */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 50px;margin-top:50px}
+.why-item{display:flex;gap:22px;align-items:flex-start}
+.why-icon{flex-shrink:0;width:60px;height:60px;border-radius:50%;background:var(--charcoal);color:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:3px solid var(--yellow)}
+.why-item h3{margin-bottom:0.5rem}
+.why-item p{color:var(--grey);font-size:0.95rem;margin:0}
+
+/* Process */
+.process{background:var(--charcoal);color:var(--white);position:relative;overflow:hidden}
+.process::before{content:"";position:absolute;top:0;right:0;width:300px;height:300px;background:radial-gradient(circle,rgba(255,214,10,0.1),transparent 70%);border-radius:50%}
+.process h2{color:var(--white)}
+.process .section-head p{color:rgba(255,255,255,0.7)}
+.steps-wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:60px}
+.steps-wrap::before{content:"";position:absolute;top:35px;left:8%;right:8%;height:2px;background:repeating-linear-gradient(90deg,var(--yellow) 0,var(--yellow) 8px,transparent 8px,transparent 16px);z-index:0}
+.step{position:relative;text-align:center;z-index:1}
+.step-num{width:70px;height:70px;border-radius:50%;background:var(--yellow);color:var(--charcoal);font-family:'Raleway',sans-serif;font-weight:900;font-size:1.8rem;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;border:6px solid var(--charcoal)}
+.step h3{color:var(--white);font-size:1.1rem}
+.step p{color:rgba(255,255,255,0.65);font-size:0.92rem}
+
+/* Testimonials */
+.testimonials{background:var(--yellow-soft);position:relative}
+.testimonials::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,214,10,0.3) 1px,transparent 1px),radial-gradient(circle at 80% 70%,rgba(255,214,10,0.3) 1px,transparent 1px);background-size:50px 50px;opacity:0.5}
+.testimonials .container{position:relative;z-index:1}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+.t-card{background:var(--white);padding:34px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.05);position:relative;border-bottom:4px solid var(--yellow)}
+.t-card .quote-mark{position:absolute;top:14px;right:20px;font-size:3.5rem;color:var(--yellow);font-family:Georgia,serif;line-height:1;opacity:0.5}
+.stars{color:var(--yellow);margin-bottom:14px;font-size:1rem;letter-spacing:2px}
+.t-text{color:var(--charcoal-light);font-style:italic;margin-bottom:20px;font-size:0.95rem}
+.t-author{display:flex;align-items:center;gap:12px}
+.t-avatar{width:44px;height:44px;border-radius:50%;background:var(--charcoal);color:var(--yellow);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Raleway',sans-serif}
+.t-name{font-weight:700;font-size:0.95rem}
+.t-role{font-size:0.82rem;color:var(--grey)}
+
+/* FAQ */
+.faq{background:var(--white)}
+.faq-wrap{max-width:820px;margin:50px auto 0}
+.faq-item{border:1px solid #eee;border-radius:8px;margin-bottom:14px;overflow:hidden;transition:box-shadow .25s,border-color .25s}
+.faq-item.open{border-color:var(--yellow);box-shadow:0 6px 20px rgba(0,0,0,0.05)}
+.faq-q{width:100%;background:none;border:none;padding:22px 26px;text-align:left;font-family:'Raleway',sans-serif;font-weight:700;font-size:1.05rem;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:48px}
+.faq-q .icon{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--yellow);color:var(--charcoal);display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.faq-item.open .faq-q .icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 26px}
+.faq-item.open .faq-a{max-height:400px;padding:0 26px 22px}
+.faq-a p{color:var(--grey);margin:0}
+
+/* Hours & Location */
+.hours-section{background:var(--light)}
+.hours-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:stretch}
+.hours-card{background:var(--white);padding:40px;border-radius:10px;border-top:5px solid var(--yellow)}
+.hours-card h3{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.hours-card h3 i{color:var(--yellow-dark)}
+.hours-list{list-style:none}
+.hours-list li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #e5e5e5;font-size:0.95rem}
+.hours-list li:last-child{border-bottom:none}
+.hours-list .day{font-weight:600}
+.hours-list .time{color:var(--yellow-dark);font-weight:700}
+.address-block{margin-top:26px;padding-top:24px;border-top:2px solid var(--yellow-tint)}
+.address-block p{display:flex;gap:10px;align-items:flex-start;font-size:0.95rem;color:var(--grey);margin-bottom:8px}
+.address-block i{color:var(--yellow-dark);margin-top:5px}
+.map-wrap{border-radius:10px;overflow:hidden;min-height:420px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+.map-wrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,var(--charcoal) 0%,var(--charcoal-light) 100%);color:var(--white);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(255,214,10,0.1),transparent 60%)}
+.contact .container{position:relative;z-index:1;max-width:760px}
+.contact h2{color:var(--white)}
+.contact p.lead{color:rgba(255,255,255,0.8);font-size:1.1rem;margin-bottom:36px}
+.call-btn{display:inline-flex;align-items:center;gap:16px;background:var(--yellow);color:var(--charcoal);padding:24px 44px;border-radius:8px;font-family:'Raleway',sans-serif;font-weight:900;font-size:1.5rem;transition:all .25s;box-shadow:0 12px 40px rgba(255,214,10,0.3)}
+.call-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 50px rgba(255,214,10,0.4)}
+.call-btn i{font-size:1.6rem}
+.contact-form{margin-top:50px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:36px;border-radius:10px;backdrop-filter:blur(10px)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.contact-form input,.contact-form textarea{width:100%;padding:14px 16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:5px;color:var(--white);font-family:inherit;font-size:0.95rem}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.5)}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--yellow);background:rgba(255,255,255,0.12)}
+.contact-form textarea{min-height:120px;resize:vertical;margin-bottom:14px}
+
+/* Footer */
+.footer{background:#0F0F12;color:rgba(255,255,255,0.7);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.footer h4{color:var(--white);font-size:1rem;margin-bottom:20px;text-transform:uppercase;letter-spacing:1.5px}
+.footer .logo{color:var(--white);margin-bottom:18px}
+.footer-col p,.footer-col li{font-size:0.9rem;margin-bottom:10px}
+.footer-col ul{list-style:none}
+.footer-col a{transition:color .2s}
+.footer-col a:hover{color:var(--yellow)}
+.footer-col i{color:var(--yellow);width:18px;margin-right:8px}
+.footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:0.85rem}
+
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-visual{height:300px;order:-1}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-wrap{grid-template-columns:repeat(2,1fr);gap:40px}
+  .steps-wrap::before{display:none}
+  .t-grid{grid-template-columns:1fr;gap:20px}
+  .hours-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media (max-width:768px){
+  .section{padding:70px 0}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;border-bottom:1px solid #eee;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+  .nav-links.active{max-height:500px;padding:10px 0}
+  .nav-links li{width:100%;border-bottom:1px solid #f3f3f3}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{display:block;padding:16px 24px;width:100%}
+  .nav-cta{margin:8px 24px;display:inline-block!important}
+  .hamburger{display:flex;align-items:center;justify-content:center}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr;gap:30px}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .stat-card{padding:22px}
+  .stat-num{font-size:2rem;min-width:110px}
+  .call-btn{font-size:1.15rem;padding:20px 30px}
+  .bolt-card.bc1{font-size:0.85rem;padding:14px 18px}
+  .bolt-card.bc2{font-size:0.78rem;padding:14px 18px}
+}
+@media (max-width:480px){
+  .container{padding:0 18px}
+  .section{padding:55px 0}
+  .hero{padding:70px 0 90px}
+  .btn{padding:14px 22px;font-size:0.85rem;width:100%;justify-content:center}
+  .hero-ctas{flex-direction:column;width:100%}
+  .steps-wrap{grid-template-columns:1fr}
+  .hours-card,.contact-form{padding:24px}
+  .service-card,.t-card{padding:26px 22px}
+  .stat-card{flex-direction:column;align-items:flex-start;gap:8px;padding:22px}
+  .call-btn{font-size:1rem;padding:18px 22px;flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-wrap">
+    <a href="#" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
+      Tudor Electrical
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Call Steve</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="dot"></span> 24/7 Emergency Callouts • Bakery Hill</div>
+      <h1>Ballarat's Trusted Electricians, <span class="highlight">On Time</span> and On the Tools</h1>
+      <p class="lead">Based in Bakery Hill, Tudor Electrical handles everything from new light fittings to switchboard upgrades across Ballarat and the surrounding region — with same-day call-backs and 24/7 emergency callouts.</p>
+      <div class="hero-ctas">
+        <a href="tel:0490015959" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Steve Today</a>
+        <a href="#contact" class="btn btn-outline">Request a Quote</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#FFD60A" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#FFD60A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="180" fill="url(#bg)"/>
+        <circle cx="200" cy="200" r="140" fill="none" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+        <circle cx="200" cy="200" r="100" fill="none" stroke="#FFD60A" stroke-width="1" opacity="0.3"/>
+        <path d="M210 90 L150 220 L195 220 L185 310 L260 175 L210 175 Z" fill="#FFD60A" stroke="#FFD60A" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div class="bolt-card bc1"><i class="fa-solid fa-shield-halved"></i>Licensed & Insured</div>
+      <div class="bolt-card bc2"><i class="fa-solid fa-star"></i>5-Star Reviews</div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="eyebrow">About Tudor</span>
+        <h2>The Sparkies Your Neighbours Already Recommend</h2>
+        <p>Tudor Electrical is a small, locally-run team led by Steve, working out of Bakery Hill and looking after homes right across Ballarat. Customers keep coming back because we return calls the same day, turn up when we say we will, and arrive with the right tools and materials to get the job done first time.</p>
+        <p>Whether it's hanging a few ceiling fans, running underground power to a shed, or upgrading an ageing switchboard, we leave the place tidy and the work done properly. No mess, no fuss, no surprises on the invoice.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Emergency Callouts</div></div>
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">5-Star Reviews</div></div>
+        <div class="stat-card"><div class="stat-num">Same-Day</div><div class="stat-label">Call-Backs</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>Electrical Services Across Ballarat</h2>
+      <p>From a single light fitting through to full switchboard upgrades — we cover the lot, properly and to Australian Standards.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div><h3>Light Fittings & Ceiling Fans</h3><p>Swapping out tired old fittings or kitting out a whole house with new downlights and fans is bread and butter for our team. We work quickly, clean up after ourselves, and make sure everything's wired safely to Australian Standards.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Switchboard Upgrades</h3><p>Older Ballarat homes often have switchboards that simply can't keep up with modern appliances or safety requirements. We replace ceramic fuses with safety switches and circuit breakers, giving your home proper protection against electrical faults.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-plug"></i></div><h3>Underground Power & New Circuits</h3><p>Running power out to a shed, granny flat, garage or pool pump takes more than a shovel and good intentions. We trench, lay and terminate underground supply properly, with the right conduit and depth so it lasts decades.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-bolt"></i></div><h3>24/7 Emergency Electrical</h3><p>Lost power at 11pm or smelling something burning behind a power point? Give Steve a call any hour of the day or night and we'll get someone out to make it safe.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h3>Safety Inspections & Repairs</h3><p>If your lights flicker, breakers keep tripping, or you've just bought a place and want peace of mind, we'll test and inspect the lot. You'll get a straight answer on what needs doing and what can wait.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-solid fa-house-circle-check"></i></div><h3>Full Home Rewiring</h3><p>Renovating, extending or just sick of dodgy old wiring? We plan the job carefully so you keep power where you need it, with minimal disruption to your home and family.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="section why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Tudor</span>
+      <h2>Why Ballarat Homeowners Stick With Us</h2>
+      <p>It's not rocket science — we just turn up, do the job properly, and treat your home with respect.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-clock"></i></div><div><h3>Available Around the Clock</h3><p>Electrical problems don't keep business hours, and neither do we. Tudor Electrical is on call 24/7 for emergencies right across Ballarat and the surrounding region.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-phone"></i></div><div><h3>Same-Day Call-Backs</h3><p>Leave Steve a message and you'll hear back the same day — not next week. We know how frustrating it is chasing tradies, so we make a point of picking up the phone.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-tag"></i></div><div><h3>Fair, Upfront Pricing</h3><p>We quote honestly and stick to it, with no padded hours or invented extras. That's why so much of our work comes from repeat customers and word of mouth.</p></div></div>
+      <div class="why-item"><div class="why-icon"><i class="fa-solid fa-broom"></i></div><div><h3>Clean, Tidy Workmanship</h3><p>We treat your home like our own, laying down drop sheets and cleaning up before we leave. You'll barely know we've been there — except for the lights working properly.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="background:var(--yellow);color:var(--charcoal)">How It Works</span>
+      <h2>Four Simple Steps</h2>
+      <p>From first call to final clean-up, here's exactly what to expect when you hire us.</p>
+    </div>
+    <div class="steps-wrap">
+      <div class="step"><div class="step-num">1</div><h3>Give Us a Call</h3><p>Ring or message Steve and we'll get back to you the same day to talk through what you need.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Honest Quote</h3><p>We'll assess the job in person or over the phone and give you a clear, upfront price with no hidden surprises.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>On-Time, On-Tools</h3><p>We turn up when we say we will, with all the gear and materials needed to finish the job in one visit where possible.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Tidy Up & Sign Off</h3><p>Once everything's tested and working, we clean up the worksite and walk you through what's been done.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Ballarat Locals Are Saying</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <span class="quote-mark">"</span>
+        <div class="stars">★★★★★</div>
+        <p class="t-text">Great service and a great price, the guys at Tudor fitted many light fittings and fans in our house, they worked speedily and cleared up their mess which wasn't that much to be honest. I fully recommend.</p>
+        <div class="t-author"><div class="t-avatar">JS</div><div><div class="t-name">John Sumattasay</div><div class="t-role">Ballarat homeowner</div></div></div>
+      </div>
+      <div class="t-card">
+        <span class="quote-mark">"</span>
+        <div class="stars">★★★★★</div>
+        <p class="t-text">Have used Tudor Electrical a few times now and very happy with their service. They are always on time, helpful with their advice and trustworthy to have in your home. Plus they do excellent work!</p>
+        <div class="t-author"><div class="t-avatar">EM</div><div><div class="t-name">Emma Murphy</div><div class="t-role">Repeat customer</div></div></div>
+      </div>
+      <div class="t-card">
+        <span class="quote-mark">"</span>
+        <div class="stars">★★★★★</div>
+        <p class="t-text">Steve has always returned my phone calls same day. He has always arrived on time and with all the appropriate tools and materials for the job. He's upgraded my switchboard, supplied underground power.</p>
+        <div class="t-author"><div class="t-avatar">SR</div><div><div class="t-name">Susan Robinson</div><div class="t-role">Switchboard upgrade</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions, Straight Answers</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item"><button class="faq-q">Do you really answer the phone after hours?<span class="icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><p>Yes — Steve takes calls 24/7 for genuine electrical emergencies like power outages, burning smells, or sparking outlets. For non-urgent jobs, leave us a message and we'll ring back the same day during business hours.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What areas around Ballarat do you cover?<span class="icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><p>We're based in Bakery Hill and regularly work across all Ballarat suburbs including Sebastopol, Wendouree, Alfredton, Buninyong and Mount Clear. If you're a bit further out, give us a ring and we'll let you know.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can you upgrade an old switchboard with ceramic fuses?<span class="icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><p>Absolutely — switchboard upgrades are one of the most common jobs we do, especially in older Ballarat homes. We'll fit new safety switches and circuit breakers that meet current Australian Standards, usually within a single day.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you provide a written quote before starting work?<span class="icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><p>Yes, for any job beyond a quick fix we'll provide a clear quote so you know exactly where you stand. No vague hourly estimates that blow out — just an honest price for the work involved.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section class="section hours-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Find Us</span>
+      <h2>Hours & Location</h2>
+    </div>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock"></i> Trading Hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Tuesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Wednesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Thursday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Friday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Saturday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Sunday</span><span class="time">Open 24 hours</span></li>
+        </ul>
+        <div class="address-block">
+          <p><i class="fa-solid fa-location-dot"></i> 67 Humffray St N, Bakery Hill VIC 3350, Australia</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:0490015959" style="color:var(--charcoal);font-weight:600">0490 015 959</a></p>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=67+Humffray+St+N,+Bakery+Hill+VIC+3350,+Australia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tudor Electrical location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <span class="eyebrow">Get In Touch</span>
+    <h2>Need a Sparky? Give Steve a Bell.</h2>
+    <p class="lead">Same-day call-backs, honest quotes, and 24/7 emergency response across Ballarat.</p>
+    <a href="tel:0490015959" class="call-btn"><i class="fa-solid fa-phone-volume"></i> 0490 015 959</a>
+
+    <form class="contact-form" action="mailto:steve@tudorelectrical.com.au" method="post" enctype="text/plain">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+      </div>
+      <input type="email" name="email" placeholder="Email address" required style="margin-bottom:14px">
+      <textarea name="message" placeholder="Tell us about the job..." required></textarea>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Enquiry <i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo"><span class="logo-mark"><i class="fa-solid fa-bolt"></i></span> Tudor Electrical</div>
+        <p>Your locally-run Ballarat sparkies — based in Bakery Hill, working across the region. Same-day call-backs and 24/7 emergency response.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Switchboard Upgrades</a></li>
+          <li><a href="#services">Lighting & Fans</a></li>
+          <li><a href="#services">Underground Power</a></li>
+          <li><a href="#services">Emergency Callouts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i><a href="tel:0490015959">0490 015 959</a></li>
+          <li><i class="fa-solid fa-location-dot"></i>67 Humffray St N, Bakery Hill VIC 3350</li>
+          <li><i class="fa-solid fa-clock"></i>Open 24 / 7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Tudor Electrical. All rights reserved. Licensed electricians serving Ballarat & surrounds.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  const icon = hamburger.querySelector('i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-xmark');
+});
+// Close on link click (mobile)
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      const icon = hamburger.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    }
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
